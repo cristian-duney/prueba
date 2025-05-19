@@ -25,17 +25,17 @@ def register_callbacks(app):
             return mortality_data, divipola_data, code_death_data
 
         try:
-            # mortality_df = pd.read_csv("data/NoFetal2019_8.csv", sep=';', encoding='utf-8')
-            # divipola_df = pd.read_csv("data/Divipola_8.csv", sep=';', encoding='utf-8')
-            # code_death_df = pd.read_csv("data/CodigosDeMuerte_8.csv", sep=';', encoding='utf-8')
+            mortality_df = pd.read_csv("data/NoFetal2019_8.csv", sep=';', encoding='utf-8')
+            divipola_df = pd.read_csv("data/Divipola_8.csv", sep=';', encoding='utf-8')
+            code_death_df = pd.read_csv("data/CodigosDeMuerte_8.csv", sep=';', encoding='utf-8')
+            
             # Obtener la ruta al directorio base (sube un nivel desde /src/)
-            BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-            DATA_DIR = os.path.join(BASE_DIR, 'data')
+            # BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+            # DATA_DIR = os.path.join(BASE_DIR, 'data')
 
-            mortality_df = pd.read_csv(os.path.join(DATA_DIR, "NoFetal2019_8.csv"), sep=';', encoding='utf-8')
-            divipola_df = pd.read_csv(os.path.join(DATA_DIR, "Divipola_8.csv"), sep=';', encoding='utf-8')
-            code_death_df = pd.read_csv(os.path.join(DATA_DIR, "CodigosDeMuerte_8.csv"), sep=';', encoding='utf-8')
-
+            # mortality_df = pd.read_csv(os.path.join(DATA_DIR, "NoFetal2019_8.csv"), sep=';', encoding='utf-8')
+            # divipola_df = pd.read_csv(os.path.join(DATA_DIR, "Divipola_8.csv"), sep=';', encoding='utf-8')
+            # code_death_df = pd.read_csv(os.path.join(DATA_DIR, "CodigosDeMuerte_8.csv"), sep=';', encoding='utf-8')
 
             return (
                 mortality_df.to_dict('records'),
